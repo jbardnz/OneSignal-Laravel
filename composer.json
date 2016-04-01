@@ -14,6 +14,9 @@
         "php": ">=5.4.0",
     },
     "autoload": {
+		"classmap": [
+            "database/migrations"
+        ],
         "psr-4": {
             "Joanvt\\OneSignal\\": "src/"
         }
