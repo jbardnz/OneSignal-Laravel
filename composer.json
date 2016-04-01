@@ -1,0 +1,21 @@
+{
+    "name": "joanvt/onesignal",
+    "description": "Creates an amazing user interface for upload media files and manage them",
+    "homepage": "https://github.com/JoanVt/L5-media-manager",
+    "keywords": ["laravel","onesignal","push","notifications","package"],
+	"minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Joan",
+            "email": "joanv@dinamicsweb.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "Joanvt\\OneSignal\\": "src/"
+        }
+    }
+}
