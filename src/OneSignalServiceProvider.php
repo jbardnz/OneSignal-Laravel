@@ -1,6 +1,7 @@
 <?php namespace Joanvt\OneSignal;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\File;
 
 class OneSignalServiceProvider extends ServiceProvider
 {
@@ -13,9 +14,10 @@ class OneSignalServiceProvider extends ServiceProvider
     {
         
 		//config
-        $this->publishes([__DIR__.'/../config/onesignal.php' => config_path('onesignal.php')], 'config');
-        $this->mergeConfigFrom( __DIR__.'/../config/onesignal.php', 'onesignal');
-		
+      
+		if(!File::exists(config_path('onesignal.php'))){
+			$this->publishes([__DIR__.'/../config/onesignal.php' => config_path('onesignal.php')], 'config');
+		}
 		
     }
     /**
