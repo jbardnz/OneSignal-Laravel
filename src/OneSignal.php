@@ -66,15 +66,15 @@ class OneSignal
 	}
 	
 	public function addPlayer($parameters = []){
-		$location = "/player";
+		$location = "/players";
 		$this->needsAuthUser();
 		$this->needsJson();
 		$this->needsDataBinary($parameters);
-		return $this->request($location,'PUT');
+		return $this->request($location,'POST');
 	}
 	
 	public function updatePlayer($appId,$parameters = []){
-		$location = "/player";
+		$location = "/players";
 		$this->needsAuthUser();
 		$this->needsJson();
 		$this->needsDataBinary($parameters);
